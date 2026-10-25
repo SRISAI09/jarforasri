@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Little Memory Jar ❤️</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><a class="brand" href="#">♡ <span>little<br><b>love world</b></span></a>
+<nav><button id="addStarTop">✦ add a star</button><button id="viewAllTop">★ view all memories</button><button id="share">↗ share jar</button></nav></header>
+<main><section class="intro"><p class="eyebrow">A little place for our forever</p><h1>Our Little <em>Memory Jar</em> ♥</h1><p>Every little thing I love about us, saved here just for you.</p></section>
+<div class="content">
+<section class="scene"><div class="paper"></div><div class="spark s1">✦</div><div class="spark s2">✧</div>
+<div class="jar"><div class="lid"></div><div class="neck"></div><div class="glass"><div id="items"></div><div class="shine"></div></div><div class="base"></div></div>
+<p class="hint">tap an item to open its little surprise ✨</p><small id="count">1 little memory inside</small></section>
+<section class="controls"><h2>Add a little something</h2><p>Choose a tiny treasure to add to our jar.</p>
+<div class="grid"><button class="add" data-type="star"><span>⭐</span><b>Add Star<small>A special memory</small></b><i>+</i></button>
+<button class="add" data-type="heart"><span>💖</span><b>Add Heart<small>A little love note</small></b><i>+</i></button>
+<button class="add" data-type="rose"><span>🌹</span><b>Add Rose<small>Just because</small></b><i>+</i></button>
+<button class="add" data-type="chocolate"><span>🍫</span><b>Add Chocolate<small>A sweet moment</small></b><i>+</i></button></div>
+<div class="note"><b>♥</b><p>Our first star is for the day our little October journey became a memory.</p><small>made with love, just for you</small></div>
+<button class="primary" id="viewAll">✨ View All Memories <span>→</span></button><button class="reset" id="reset">Start the jar over</button>
+</section></div></main><footer>Every star has a story. Every story leads back to you. ♡</footer>
+
+<div class="backdrop" id="addModal" hidden>
+  <section class="dialog add-dialog">
+    <button class="close" id="addClose" type="button">×</button>
+    <div class="big" id="addEmoji">⭐</div>
+    <p class="eyebrow">add a new treasure</p><h2>Save a little memory</h2>
+    <p class="form-help">Give this treasure its own title, message, and website link.</p>
+    <label class="memory-field">Memory title<input id="memoryTitle" type="text" placeholder="e.g. Our Little October Journey" maxlength="90"></label>
+    <label class="memory-field">Sweet message<textarea id="memoryMessage" rows="3" placeholder="Write a little message..."></textarea></label>
+    <label class="memory-field">Website URL<input id="memoryUrl" type="url" placeholder="https://your-memory-website.com"></label>
+    <p class="form-error" id="formError" hidden>Please enter a valid URL starting with https:// or http://.</p>
+    <button class="primary" id="saveMemory" type="button">Add to the jar ♥</button>
+    <button class="secondary" id="cancelMemory" type="button">Cancel</button>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div><div class="hearts" id="hearts"></div>
+<div class="backdrop" id="modal" hidden><section class="dialog"><button class="close" id="close">×</button><div id="emoji" class="big">⭐</div><p class="eyebrow">a little surprise for you</p><h2 id="title">Our Little October Journey</h2><p id="description"></p><button class="primary" id="openJourney">Open our journey ♥</button><button class="secondary" id="keep">Keep it in the jar</button></section></div>
+<script src="script.js"></script></body></html>
